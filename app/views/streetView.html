@@ -1,0 +1,44 @@
+<div class="promo section offset-header has-pattern" style="height:150px;" >
+    <div class="container" style="padding-top:0px;marin-top:5px;">
+    </div>
+</div>
+
+<div class="container">
+    <br/><br/>
+<div id="panoBig"></div>
+<div ng-if="msg">
+        <div class="alert alert-{{type}} pgray  alert-lg" role="alert">
+            <br/>   
+            <h4 class="no-margin no-padding">{{msg}}</h4>
+            <br/>
+        </div>
+</div>
+<ul id="ulcurrentStreetViews" ng-show="vm.currentStreetViews.length">
+    <li ng-repeat="view in vm.currentStreetViews | reverse">
+        <h2>{{view.title}}</h2>
+        <i class="fa fa-map-marker"> </i><span> {{view.place}}</span><br/><br/>
+        <p>{{view.description}}</p>
+        <p>{{view.descriptionsource}}</p>
+        <p>{{view.date}}</p>
+        <p>{{view.ownername}}</p>
+        <br/>
+         <div>
+            <form>
+                <a class="btn btn-primary" href="" style="width:180px;">
+                    <i class="fa fa-pencil fa-lg"></i>  Edit  
+                </a>
+
+                <a class="btn btn-danger" href="" style="width:180px;margin-left:75px;" ng-click="vm.removeStreetView(view);">
+                    <i class="fa fa-trash-o fa-lg"></i>  Delete  
+                </a>
+
+                <a class="btn btn-success" href="" style="width:180px;margin-left:75px;" ng-click="vm.addStreetView(view);">
+                    <i class="fa fa-floppy-o fa-lg"></i>  Save Into MyGallery  
+                </a>
+            </form>
+        <div>
+    </li>
+</ul>
+<br/><br/>
+
+</div>

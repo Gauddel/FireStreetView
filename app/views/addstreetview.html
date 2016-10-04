@@ -1,0 +1,86 @@
+<div class="promo section offset-header has-pattern" style="height:150px;" >
+    <div class="container" style="padding-top:5px;margin-top:15px;">
+        <h3>Bookmark any StreetView from Google - Manage Your StreetViews</h3>
+    </div>
+</div>    
+        <div class="container">
+            <br/><br/><br/>
+            <div class="row">
+                <div class="col-md-9 page-content">
+                    <div class="inner-box category-content">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <form class="form-horizontal">
+
+                                    <fieldset>
+                                        <!-- Text input-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">PanoId</label>
+                                            <div class="col-md-8">
+                                                <input placeholder="StreetView PanoId"
+                                                       class="form-control input-md" ng-model="vm.currentStreetView.panoId" type="text"/>
+                                            </div>
+                                        </div>
+
+                                        <!-- Text input-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">Titre</label>
+                                            <div class="col-md-8">
+                                                <input placeholder="Ajouter un titre" name="title" placeholder="title"
+                                                       class="form-control input-md" ng-model="vm.currentStreetView.title" type="text"/>
+                                            </div>
+                                        </div>
+
+                                        <!-- Text input-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">Lieu</label>
+                                            <div class="col-md-8">
+                                                <input id="Lieu" name="Lieu" placeholder="Lieu"
+                                                       class="form-control input-md" ng-model="vm.currentStreetView.place" type="text"/>
+                                            </div>
+                                        </div>
+
+                                        <!-- Textarea -->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">Description</label>
+                                            <div class="col-md-8">
+                                                <textarea style="height: 250px" class="form-control" placeholder="Description"  ng-model="vm.currentStreetView.description">Description</textarea>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Text input-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">Source</label>
+                                            <div class="col-md-8">
+                                                <input id="Source" name="Source" placeholder="Source Description"
+                                                       class="form-control input-md" ng-model="vm.currentStreetView.descriptionsource" type="text"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group" style="text-align:right">
+                                            <label class="col-md-3 control-label"></label>
+                                            <div class="col-md-8"><a class="btn btn-success btn-lg" ng_click="vm.addStreetView()">Add StreetView</a></div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                                
+                                        <p class="{{vm.errType}}" ng-show="vm.msginfo">{{vm.msginfo}}</p>
+                                        <br/>
+                                
+                                            <ul id="ulviews" ng-show="vm.userViews.length">
+                                            <li ng-repeat="usrview in vm.userViews | reverse">
+                                                <a href="#/streetview/{{usrview.panoId}}">    
+                                                    <div class ="well">
+                                                    <h4 style="color:steelblue;">{{usrview.title}}</h4>   <h5><i class="fa fa-map-marker"> </i> {{usrview.place}}</h5>
+                                                    <p>{{usrview.description}}</p>
+                                                    <p>{{usrview.date}}</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

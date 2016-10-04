@@ -1,0 +1,29 @@
+
+<div class="promo section offset-header has-pattern" >
+    <div class="container" style="padding-top:0px;marin-top:5px;">
+        <div style="margin-top:5px;">
+            <div id="panoMain"></div>
+        </div>
+    </div>
+</div>
+ <div class="container">
+    <br/>
+        <h3>Bookmark and Manage Most Awesome Google StreetViews</h3>
+    <br/>
+    <h4>Latest Posts</h4>
+    <div class="row marketing">  
+        <ul id="ulviews" ng-show="vm.views.length">
+            <li ng-repeat="view in vm.views | reverse">
+                <a href="#/streetview/{{view.panoId}}">    
+                    <div class ="well">
+                    <h4 style="color:steelblue;">{{view.title}}</h4>   <h5><i class="fa fa-map-marker"> </i> {{view.place}}</h5>
+                    <p>{{view.description}}</p>
+                    <p>{{usrview.date}}</p>
+
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
