@@ -1,0 +1,103 @@
+body {
+  font-family: Open Sans;
+}
+
+a {
+    color:black;
+}
+
+#panoBig {
+  position:relative;
+  width: 100%; 
+  height: 450px;
+  border:solid 0px darkgoldenrod;
+}
+
+#panoMain {
+  position:relative;
+  width: 86%; 
+  height: 380px;
+  border:solid 0px darkblue;
+  margin:auto;
+}
+
+#ulcurrentStreetViews,#ulviews {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#ulcurrentStreetViews,#ulviews > li{
+  margin-left:0;
+}
+
+.navbar-nav {
+    float: right;
+    margin: 0;
+    height: 100%;
+    color:papayawhip;
+}
+
+.header {
+    margin-bottom: 0px;
+}
+
+.container {
+    min-width: 900px;
+}
+
+.customheader
+{
+  height: 100%;
+}
+
+.navbar {
+    position: relative;
+    min-height: 70px;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+}
+
+#js-navbar-collapse{
+  height: 100%;
+}
+
+li ::active{
+background:none;
+}
+/*
+.promo {
+    background-color: #56bc94;
+    color: #fff;
+}*/
+
+.promo {
+    background-color:steelblue;
+    color: #fff;
+    border-top:solid 1px lightgray;
+    border-bottom:solid 1px lightgray;
+    width:100%;
+    height:420px;
+}
+
+.has-pattern {
+    background-image: url(../images/pattern-1.png);
+    background-repeat: repeat;
+    background-position: left top;
+}
+.offset-header {
+    padding-top: 15px;
+}
+.navbar-brand  {
+  color: black;
+}
+
+li  a:hover
+{
+  text-decoration: none;
+  color:black;
+}
+
+.listdemoBasicUsage md-divider {
+  margin-top: 10px;
+  margin-bottom: 0; 
+}
